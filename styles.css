@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #15585b
+}
+
+footer {
+    background-color: rgb(241 245 249);
+}
+
+#hero-image-container {
+    background-image: url('./assets/marina-parking.png');
+    background-size: 2000px 600px;
+    background-repeat: no-repeat;
+    padding: 130px;
+}
+
+#reviews-palette {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-items: center;
+    gap: 1rem;
+    margin: 80px;
+}
+
+@media (max-width: 1170px) {
+    #reviews-palette {
+        margin: 20px;
+    }    
+}
+
+@media (max-width: 800px) {
+    #reviews-palette {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+    #reviews-palette >  .quote-2 {
+        display: none;
+    }   
+    #reviews-palette >  .quote-3 {
+        display: none;
+    }   
+}
+
+
+
+.quote-image > img {
+    width: 10rem;
+}
+
+.quote-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
