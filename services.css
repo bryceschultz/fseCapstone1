@@ -1,0 +1,28 @@
+#premium-card {
+    --tw-border-opacity: 1;
+    border-color: rgb(37 99 235 / var(--tw-border-opacity));
+}
+
+.text-primary-800 {
+    --tw-text-opacity: 1;
+    color: rgb(30 64 175 / var(--tw-text-opacity));
+}
+
+.bg-primary-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(219 234 254 / var(--tw-bg-opacity));
+}
+
+#badge-container {
+    margin-bottom: 0.5rem;
+}
+
+#badge {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-bottom: 0.25rem;
+    padding-top: 0.25rem;
+    border-radius: 0.25rem;
+}
