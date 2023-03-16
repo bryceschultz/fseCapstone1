@@ -81,21 +81,13 @@
 
 
 #illustration-boat-section {
-    display: grid;
-    align-items: center;
-    padding-bottom: 4rem;
-    padding-top: 4rem;
-    gap: 5rem;
-    grid-template-columns: repeat(12,minmax(0,1fr));    
-    padding-bottom: 2rem;
-    padding-top: 2rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
     margin: 20px;
+    position: relative;
 }   
 
 #boat {
-    position: absolute; 
+    position: absolute;
+    bottom: -100px;
 }
 
 @media (max-width: 1170px) {
