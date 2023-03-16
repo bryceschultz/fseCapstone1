@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/assets/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="styles.css" rel="stylesheet">
     <link href="index.css" rel="stylesheet">
@@ -16,7 +17,7 @@
             <a href="/" class="flex items-center">
                 <span class="self-center text-xl font-semibold text-gray-900 uppercase whitespace-nowrap dark:text-white">PARQ</span>
             </a>
-            <button data-collapse-toggle="navbar-default" type="button"
+            <button data-collapse-toggle="navbar-default" type="button" id="navbar-control"
                 class="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                 aria-controls="navbar-default" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
@@ -102,13 +103,36 @@
 
     <section>
         <div id="illustration-section">
-            <img src="./assets/boating.svg" class="illustration-sub-component" />
+            <div class="illustration-sub-component">
+                <div class="bird-container bird-container--one">
+                    <div class="bird bird--one"></div>
+                </div>
+                
+                <div class="bird-container bird-container--two">
+                    <div class="bird bird--two"></div>
+                </div>
+                
+                <div class="bird-container bird-container--three">
+                    <div class="bird bird--three"></div>
+                </div>
+                
+                <div class="bird-container bird-container--four">
+                    <div class="bird bird--four"></div>
+                </div>
+            </div>
             <div class="illustration-sub-component"> 
-                <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl">We invest in the worlds potential</h1>
+                <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl">We invest in your potential</h1>
                 <p class="mb-6 text-lg font-normal text-gray-500 lg:text-xl">We take the headache out of marina management so you and your customers can spend more time on the water.</p>
             </div>        
         </div>
     </section>
+
+    <section>
+        <div id="illustration-boat-section">
+            <img id="boat" src="./assets/boating.svg"/>    
+        </div>
+    </section>
+
 
     </main>
 
@@ -130,13 +154,16 @@
                             <a href="/" class="hover:underline">Home</a>
                         </li>
                         <li class="mb-1">
-                            <a href="/about.html" class="hover:underline">About</a>
-                        </li>
-                        <li class="mb-1">
                             <a href="/services.html" class="hover:underline">Services</a>
                         </li>
                         <li class="mb-1">
+                            <a href="/contact.html" class="hover:underline">Contact</a>
+                        </li>
+                        <li class="mb-1">
                             <a href="/login.html" class="hover:underline">Login</a>
+                        </li>
+                        <li class="mb-1">
+                            <a href="/registration.html" class="hover:underline">Registration</a>
                         </li>
                     </ul>
                 </div>
@@ -200,9 +227,17 @@
         </div>
     </footer>
 
+    <script src="index.js">
+    </script>
     <script>
         window.addEventListener('scroll', () => {
-            document.body.style.setProperty('--scroll', window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+            const scroll = (window.pageYOffset / (document.body.offsetHeight - window.innerHeight));
+            if (window.innerWidth > 800) {
+                document.getElementById("boat").style.left = `${scroll * 500}px`;
+            } else {
+                document.getElementById("boat").style.left = `${scroll * 200}px`;
+            }
+            
         }, false);
     </script>
 
