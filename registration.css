@@ -1,0 +1,66 @@
+#registration-section {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap-reverse;
+    justify-content: center;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+    gap: 5rem;
+    grid-template-columns: repeat(12,minmax(0,1fr));    
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding: 80px;
+}
+
+.registration-sub-component {
+    grid-column: span 6/span 6;
+    place-self: center;
+    width: 40%;
+}
+
+#computer { 
+    margin-left: 30px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#rocket { 
+    width: 40%;
+    position: absolute;
+    top: 20px;
+    left: 270px;
+    animation: fly 20s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+}
+
+.image-container {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+@keyframes fly {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    100% { transform: translate(300px, -1700px) rotate(-90deg); }
+  }
+
+@media (max-width: 1170px) {
+    .registration-sub-component {
+        width: 100%;
+    }
+    
+}
+
+@media (max-width: 670px) {
+    #rocket { 
+        top: 30px;
+        left: 140px;
+    }
+    #registration-section {
+        padding: 10px;
+    }
+}
