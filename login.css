@@ -1,0 +1,60 @@
+#login-section {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap-reverse;
+    justify-content: center;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+    gap: 5rem;
+    grid-template-columns: repeat(12,minmax(0,1fr));    
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding: 80px;
+}
+
+.login-sub-component {
+    grid-column: span 6/span 6;
+    place-self: center;
+    width: 40%;
+}
+
+#computer { 
+    margin-top: 15px;
+    margin-left: 30px;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+#rocket { 
+    margin-top: 15px;
+    width: 40%;
+    position: absolute;
+    top: 20px;
+    left: 270px;
+
+}
+
+.image-container {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+@media (max-width: 1170px) {
+    .login-sub-component {
+        width: 100%;
+    }
+}
+
+@media (max-width: 670px) {
+    #rocket { 
+        top: 30px;
+        left: 140px;
+    }
+    #login-section {
+        padding: 10px;
+    }
+}
