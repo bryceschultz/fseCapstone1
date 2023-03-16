@@ -6,6 +6,15 @@
     padding: 130px;
 }
 
+@media (max-width: 1170px) {
+    #hero-image-container {
+        background-size: 1500px 450px;
+        padding: 60px;
+        padding-top: 100px;
+        padding-left: 30px;
+    }
+}
+
 #reviews-palette {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -73,6 +82,7 @@
 
 #illustration-boat-section {
     display: grid;
+    align-items: center;
     padding-bottom: 4rem;
     padding-top: 4rem;
     gap: 5rem;
@@ -84,13 +94,8 @@
     margin: 20px;
 }   
 
-.illustration-sub-component { 
-    place-self: center;
-}
-
 #boat {
     position: absolute; 
-    place-self: center;
 }
 
 @media (max-width: 1170px) {
