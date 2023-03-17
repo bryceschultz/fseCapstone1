@@ -33,12 +33,20 @@ select {
     background-size: 1em;
 }
 
+#cc-number {
+    border-radius: 0;
+    border-top-right-radius: .5rem;
+    border-top-left-radius: .5rem;
+}
+
 #cc-exp {
+    border-radius: 0;
     border-bottom-left-radius: 0.5rem;
     border-top: none;
 }
 
 #cc-cvc {
+    border-radius: 0;
     border-bottom-right-radius: 0.5rem;
     border-top: none;
     border-left: none;
