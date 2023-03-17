@@ -1,5 +1,9 @@
 * {
     box-sizing: border-box;
+    /* Remove mobile weird styling */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 body {
